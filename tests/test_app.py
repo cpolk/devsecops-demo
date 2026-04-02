@@ -1,4 +1,10 @@
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from app import app
+
 
 def test_home():
     client = app.test_client()
@@ -6,6 +12,7 @@ def test_home():
     assert response.status_code == 200
     payload = response.get_json()
     assert payload["status"] == "ok"
+
 
 def test_health():
     client = app.test_client()
