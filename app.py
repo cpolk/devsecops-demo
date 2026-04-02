@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.get("/")
 def home():
     return jsonify({
-        "service": "github-devsecops-demo",
+        "service": "devsecops-demo",
         "status": "ok",
         "message": "Sample application showing CI-ready GitHub workflow patterns."
     })
